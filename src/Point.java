@@ -36,4 +36,4 @@ public class Point {
 		}
 		return min;
 	}
-}
+} 

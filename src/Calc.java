@@ -7,7 +7,7 @@ public class Calc {
 		Point p1 = new Point(1, 4);
 		Point p2 = new Point(4, 4);
 		Point p3 = new Point(3, 2);
-		Point p4 = null; //new Point(-5, );
+		Point p4 = new Point(7, 7);
 		
 		Point[] points = {p1, p2, p3, p4};
 
@@ -16,6 +16,5 @@ public class Calc {
 		
 		double minDistanceOfArray = Point.determineMinimumOfArray(points);
 		System.out.println("Distance of Array:"+ minDistanceOfArray);
-		
 	}
 }
