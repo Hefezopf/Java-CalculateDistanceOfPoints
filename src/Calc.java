@@ -5,9 +5,9 @@ public class Calc {
 		System.out.println("Start!!!");
 
 		Point p1 = new Point(1, 4);
-		Point p2 = new Point(4, 4);
+		Point p2 = new Point(2, 3);
 		Point p3 = new Point(3, 2);
-		Point p4 = new Point(7, 7);
+		Point p4 = new Point(4, 1);
 		
 		Point[] points = {p1, p2, p3, p4};
 
