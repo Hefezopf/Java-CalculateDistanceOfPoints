@@ -1,4 +1,4 @@
-package hopf.de;
+package de.hopf;
 
 public class App 
 {
@@ -18,6 +18,5 @@ public class App
 		
 		double minDistanceOfArray = Point.determineMinimumOfArray(points);
 		System.out.println("Distance of Array:"+ minDistanceOfArray);
-
     }
 }

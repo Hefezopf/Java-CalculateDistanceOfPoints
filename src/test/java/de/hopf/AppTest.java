@@ -1,4 +1,4 @@
-package hopf.de;
+package de.hopf;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

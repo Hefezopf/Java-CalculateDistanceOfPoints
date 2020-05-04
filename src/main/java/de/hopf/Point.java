@@ -1,4 +1,5 @@
-package hopf.de;
+package de.hopf;
+
 public class Point {
 	int x;
 	int y;
