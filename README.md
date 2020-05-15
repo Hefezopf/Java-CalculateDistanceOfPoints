@@ -1,17 +1,21 @@
 # CalculateDistanceOfPoints
 The Java Programm calculates the minimum distance of points.
 
-Inline-style: 
-![alt text](https://github.com/Hefezopf/Java-CalculateDistanceOfPoints/tree/master/src/main/resources/Coordinates.png "Coordinates1")
+Sample Coordinates: 
 
-Inline-style: 
-![alt text](/src/main/resources/Coordinates.png "Coordinates2")
+![alt text](src/main/resources/Coordinates.png "Coordinates")
 
-Inline-style: 
-![alt text](src/main/resources/Coordinates.png "Coordinates3")
+Minimum distance of all points = 2.0
 
 ## Build
 mvn clean install
 
 ## Run
 mvn exec:java -Dexec.mainClass="de.hopf.App"
+
+Output:
+
+Start App...
+
+Minimum distance of all points = 2.0
+
