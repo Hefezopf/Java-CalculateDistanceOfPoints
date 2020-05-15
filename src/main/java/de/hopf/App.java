@@ -6,14 +6,14 @@ public class App
     {
 		System.out.println("Start!!!");
 
-		Point p1 = new Point(1, 4);
-		Point p2 = new Point(2, 3);
-		Point p3 = new Point(3, 2);
-		Point p4 = new Point(4, 1);
+		Point pA = new Point(1, 1);
+		Point pB = new Point(1, 3);
+		Point pC = new Point(4, 4);
+		Point pD = new Point(6, 1);
 		
-		Point[] points = {p1, p2, p3, p4};
+		Point[] points = {pA, pB, pC, pD};
 
-		double minDistance = Point.determineMinimum(p1, p2);
+		double minDistance = Point.determineMinimum(pA, pC);
 		System.out.println("Distance:"+ minDistance);
 		
 		double minDistanceOfArray = Point.determineMinimumOfArray(points);
