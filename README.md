@@ -3,7 +3,7 @@ The Java Programm calculates the minimum distance of points.
 
 Sample Coordinates: 
 
-![alt text](src/main/resources/Coordinates.png "Coordinates")
+![Coordinates](src/main/resources/Coordinates.png "Coordinates")
 
 Minimum distance of all points = 2.0
 
