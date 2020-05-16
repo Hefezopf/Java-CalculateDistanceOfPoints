@@ -1,5 +1,6 @@
-# CalculateDistanceOfPoints
-The Java Programm calculates the minimum distance of points.
+# Java-CalculateDistanceOfPoints
+
+The java program calculates the minimum distance of points.
 
 Sample Coordinates: A(1, 1), B(1, 3), C(4, 4), D(6, 1) 
 
@@ -8,9 +9,11 @@ Sample Coordinates: A(1, 1), B(1, 3), C(4, 4), D(6, 1)
 Minimum distance of all points = 2.0
 
 ## Build
+
 mvn clean install
 
 ## Run
+
 mvn exec:java -Dexec.mainClass="de.hopf.App"
 
 Output:

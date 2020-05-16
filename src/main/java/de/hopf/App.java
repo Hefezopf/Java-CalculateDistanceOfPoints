@@ -12,8 +12,8 @@ public class App
 		Point pD = new Point(6, 1);
 		
 		Point[] points = {pA, pB, pC, pD};
-	
 		double minDistanceOfArray = Point.determineMinimumOfArray(points);
+		
 		System.out.println("Minimum distance of all points = "+ minDistanceOfArray);
     }
 }
