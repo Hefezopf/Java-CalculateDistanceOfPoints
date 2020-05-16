@@ -18,4 +18,3 @@ Output:
 Start App...
 
 Minimum distance of all points = 2.0
-
