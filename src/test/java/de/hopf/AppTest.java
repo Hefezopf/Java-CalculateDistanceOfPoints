@@ -29,6 +29,6 @@ public class AppTest extends TestCase {
 		
 		Point[] points = {pA, pB, pC, pD};	
 		
-		assertEquals(2.0D, Point.determineMinimumOfArray(points));
+		assertEquals(12.0D, Point.determineMinimumOfArray(points));
 	}
 }
