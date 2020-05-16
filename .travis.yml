@@ -2,6 +2,6 @@ language: java
 notifications:
   email:
     recipients:
-      - markus@hopf-it.de
+      - notification@hopf-it.de
     on_success: never # default: change
     on_failure: always # default: always
