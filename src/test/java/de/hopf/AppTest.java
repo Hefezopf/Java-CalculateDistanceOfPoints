@@ -5,34 +5,30 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
 /**
- * Unit test for simple App.
+ * Unit test for App.
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+public class AppTest extends TestCase {
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
+	public AppTest(String testName) {
+		super(testName);
+	}
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+	public static Test suite() {
+		return new TestSuite(AppTest.class);
+	}
+
+	public void testDetermineMinimum() {
+		assertEquals(1.4142135623730951D, Point.determineMinimum(new Point(1,1), new Point(2,2)));
+	}
+
+	public void testDetermineMinimumOfArray() {
+		Point pA = new Point(1, 1);
+		Point pB = new Point(1, 3);
+		Point pC = new Point(4, 4);
+		Point pD = new Point(6, 1);
+		
+		Point[] points = {pA, pB, pC, pD};	
+		
+		assertEquals(2.0D, Point.determineMinimumOfArray(points));
+	}
 }

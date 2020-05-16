@@ -21,6 +21,6 @@ Minimum distance of all points = 2.0
 
 ## Travis
 
-Each commit will result in a travis build and is tested by travis-ci.com
+Each commit to GitHub will result in a automated online travis CI/CD build.
 
 https://travis-ci.com/github/Hefezopf/Java-CalculateDistanceOfPoints
