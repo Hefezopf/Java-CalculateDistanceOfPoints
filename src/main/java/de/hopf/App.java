@@ -20,9 +20,8 @@ public class App {
 		if (args.length > 0) {
 			List<Point> pointsList = new ArrayList<Point>();
 			for (String s : Arrays.asList(args)) { // "(4,3)", "(5,2)", ...
-				System.out.println(s);
 				int[] xy = parseToCoord(s);
-				System.out.println(xy[0] + " " + xy[1]);
+				//System.out.println(xy[0] + " " + xy[1]);
 				pointsList.add(new Point(xy[0], xy[1]));
 			}
 			points = new Point[pointsList.size()];
