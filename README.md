@@ -44,3 +44,4 @@ Hint: Only use single digit numbers as point coordinates like (4,3)!
 Each commit to GitHub will result in a automated online travis CI/CD build.
 
 https://travis-ci.com/github/Hefezopf/Java-CalculateDistanceOfPoints
+
