@@ -18,14 +18,15 @@ public class App {
 
 		Point[] points;
 		if (args.length > 0) {
-			List<Point> pointsList = new ArrayList<Point>();
-			for (String s : Arrays.asList(args)) { // "(4,3)", "(5,2)", ...
-				int[] xy = parseToCoord(s);
-				//System.out.println(xy[0] + " " + xy[1]);
-				pointsList.add(new Point(xy[0], xy[1]));
-			}
-			points = new Point[pointsList.size()];
-			points = pointsList.toArray(points);
+			points = Point.parseAllCoords(args);
+		//	List<Point> pointsList = new ArrayList<Point>();
+//			for (String s : Arrays.asList(args)) { // "(4,3)", "(5,2)", ...
+//				int[] xy = Point.parseToCoord(s);
+//				//System.out.println(xy[0] + " " + xy[1]);
+//				pointsList.add(new Point(xy[0], xy[1]));
+//			}
+//			points = new Point[pointsList.size()];
+//			points = pointsList.toArray(points);
 
 		} else {
 			Point[] pointsFixed = new Point[4];
@@ -39,13 +40,5 @@ public class App {
 		double minDistanceOfArray = Point.determineMinimumOfArray(points);
 
 		System.out.println("Minimum distance of all points = " + minDistanceOfArray);
-	}
-
-	private static int[] parseToCoord(String s) {
-		String[] xy = s.replaceAll("[^\\w\\d]", "").toLowerCase().split("");
-		int[] res = new int[2];
-		res[0] = xy[0].matches("\\d") ? Integer.parseInt(xy[0]) : xy[0].charAt(0) - 'a' + 1;
-		res[1] = xy[1].matches("\\d") ? Integer.parseInt(xy[1]) : xy[1].charAt(0) - 'a' + 1;
-		return res;
 	}
 }
