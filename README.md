@@ -8,9 +8,11 @@ Sample Coordinates: A(1, 1), B(1, 3), C(4, 4), D(6, 1)
 
 Minimum distance of all points = 2.0
 
+
 ## Build
 
 mvn clean install
+
 
 ## Run
 
@@ -21,6 +23,21 @@ Output:
 Start App...
 
 Minimum distance of all points = 2.0
+
+or run with params
+
+mvn exec:java -Dexec.mainClass="de.hopf.App" -Dexec.args="(4,3) (5,2) (1,1) (1,2)"
+
+Calling the app with this params should result in:
+ 
+Output:
+
+Start App...
+
+Minimum distance of all points = 1.0
+
+Hint: Only use single digit numbers as point coordinates like (4,3)!
+
 
 ## Travis
 

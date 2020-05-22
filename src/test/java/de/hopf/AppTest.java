@@ -18,10 +18,20 @@ public class AppTest extends TestCase {
 	}
 
 	public void testDetermineMinimum() {
-		assertEquals(1.4142135623730951D, Point.determineMinimum(new Point(1,1), new Point(2,2)));
+		assertEquals(1.4142135623730951, Point.determineMinimum(new Point(1,1), new Point(2,2)));
 	}
 
-	public void testDetermineMinimumOfArray() {
+	public void testDetermineMinimumOfArray1() {
+		Point pA = new Point(1, 1);
+		Point pB = new Point(4, 4);
+		Point pC = new Point(6, 1);
+		
+		Point[] points = {pA, pB, pC};	
+		
+		assertEquals(3.605551275463989, Point.determineMinimumOfArray(points));
+	}
+	
+	public void testDetermineMinimumOfArray2() {
 		Point pA = new Point(1, 1);
 		Point pB = new Point(1, 3);
 		Point pC = new Point(4, 4);
@@ -29,6 +39,6 @@ public class AppTest extends TestCase {
 		
 		Point[] points = {pA, pB, pC, pD};	
 		
-		assertEquals(2.0D, Point.determineMinimumOfArray(points));
+		assertEquals(2.0, Point.determineMinimumOfArray(points));
 	}
 }
