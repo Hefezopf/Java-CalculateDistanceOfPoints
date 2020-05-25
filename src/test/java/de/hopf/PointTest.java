@@ -22,7 +22,7 @@ public class PointTest extends TestCase {
 		
 		Point[] res = Point.parseAllCoords(coords);
 		
-		assertEquals(4, res.length);
+		assertEquals(44, res.length);
 		assertEquals(4, res[0].x);
 		assertEquals(3, res[0].y);
 		assertEquals(5, res[1].x);
