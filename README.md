@@ -11,6 +11,8 @@ Minimum distance of all points = 2.0
 
 ## Build and Test
 
+As IDE use Visual Studio Code or Eclipse
+
 **mvn clean install**
 
 
