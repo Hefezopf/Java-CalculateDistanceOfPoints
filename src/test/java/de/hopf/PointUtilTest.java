@@ -7,6 +7,11 @@ import junit.framework.TestCase;
  */
 public class PointUtilTest extends TestCase {
 
+	Point pA = new Point(1, 1);
+	Point pB = new Point(1, 3);
+	Point pC = new Point(4, 4);
+	Point pD = new Point(6, 1);
+
 	public void testParseAllCoords() {
 		String[] coords = { "(4,3)", "(5,2)", "(1,1)", "(1,2)" };
 
@@ -43,26 +48,39 @@ public class PointUtilTest extends TestCase {
 		assertEquals(3, res[1]);
 	}
 
-	public void testDetermineMinimum() {
-		assertEquals(1.4142135623730951, PointUtil.determineMinimum(new Point(1, 1), new Point(2, 2)));
+	public void testDetermineDistance1() {
+		assertEquals(1.4142135623730951, PointUtil.determineDistance(new Point(1, 1), new Point(2, 2)));
+	}
+
+	public void testDetermineDistance2() {
+		assertEquals(2.0, PointUtil.determineDistance(new Point(1, 1), new Point(3, 1)));
+	}
+
+	public void testDetermineMaximumOfArray1() {
+		Point[] points = { pA, pB, pC };
+
+		assertEquals(4.242640687119285, PointUtil.determineMaximumOfArray(points));
+	}
+
+	public void testDetermineMaximumOfArray2() {
+		Point[] points = { pA, pB, pC, pD };
+
+		assertEquals(5.385164807134504, PointUtil.determineMaximumOfArray(points));
+	}
+
+	public void testDetermineMaximumOfArray3() {
+		Point[] points = { pA, pC, pD };
+
+		assertEquals(5.0, PointUtil.determineMaximumOfArray(points));
 	}
 
 	public void testDetermineMinimumOfArray1() {
-		Point pA = new Point(1, 1);
-		Point pB = new Point(4, 4);
-		Point pC = new Point(6, 1);
-
-		Point[] points = { pA, pB, pC };
+		Point[] points = { pA, pC, pD };
 
 		assertEquals(3.605551275463989, PointUtil.determineMinimumOfArray(points));
 	}
 
 	public void testDetermineMinimumOfArray2() {
-		Point pA = new Point(1, 1);
-		Point pB = new Point(1, 3);
-		Point pC = new Point(4, 4);
-		Point pD = new Point(6, 1);
-
 		Point[] points = { pA, pB, pC, pD };
 
 		assertEquals(2.0, PointUtil.determineMinimumOfArray(points));

@@ -20,18 +20,33 @@ public class PointUtil {
 		return points;
 	}
 
-	public static int[] parseToCoord(String coords) {
+	public static int[] parseToCoord(String coords) { // "(4,3)"
 		int[] res = new int[2];
 
-		String[] xy = coords.replaceAll("[^\\w\\d]", "").toLowerCase().split("");
-		res[0] = xy[0].matches("\\d") ? Integer.parseInt(xy[0]) : xy[0].charAt(0) - 'a' + 1;
-		res[1] = xy[1].matches("\\d") ? Integer.parseInt(xy[1]) : xy[1].charAt(0) - 'a' + 1;
+		res[0] = coords.charAt(1) - 48;
+		res[1] = coords.charAt(3) - 48;
 
 		return res;
 	}
 
-	public static double determineMinimum(Point p1, Point p2) {
+	public static double determineDistance(Point p1, Point p2) {
 		return Math.sqrt(Math.pow((p2.x - p1.x), 2) + Math.pow((p2.y - p1.y), 2));
+	}
+
+	public static double determineMaximumOfArray(Point[] points) {
+		if (points.length < 1) {
+			throw new IllegalArgumentException("too less points");
+		}
+		double max = 0;
+		for (int i = 0; i < points.length; i++) {
+			Point startPoint = points[i];
+			if (startPoint == null) {
+				throw new IllegalArgumentException("startPoint is null");
+			}
+			max = calculateMaximum(points, startPoint, max, i);
+		}
+
+		return max;
 	}
 
 	public static double determineMinimumOfArray(Point[] points) {
@@ -44,15 +59,26 @@ public class PointUtil {
 			if (startPoint == null) {
 				throw new IllegalArgumentException("");
 			}
-			min = calculate(points, startPoint, min, i);
+			min = calculateMinimum(points, startPoint, min, i);
 		}
 
 		return min;
 	}
 
-	private static double calculate(Point[] points, Point startPoint, double min, int startVal) {
+	private static double calculateMaximum(Point[] points, Point startPoint, double max, int startVal) {
 		for (int i = startVal + 1; i < points.length; i++) {
-			double minTemp = determineMinimum(startPoint, points[i]);
+			double maxTemp = determineDistance(startPoint, points[i]);
+			if (maxTemp > max) {
+				max = maxTemp;
+			}
+		}
+
+		return max;
+	}
+
+	private static double calculateMinimum(Point[] points, Point startPoint, double min, int startVal) {
+		for (int i = startVal + 1; i < points.length; i++) {
+			double minTemp = determineDistance(startPoint, points[i]);
 			if (minTemp < min) {
 				min = minTemp;
 			}
