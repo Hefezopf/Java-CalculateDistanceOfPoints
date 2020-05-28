@@ -57,7 +57,7 @@ public class PointUtil {
 		for (int i = 0; i < points.length; i++) {
 			Point startPoint = points[i];
 			if (startPoint == null) {
-				throw new IllegalArgumentException("");
+				throw new IllegalArgumentException("startPoint is null");
 			}
 			min = calculateMinimum(points, startPoint, min, i);
 		}
