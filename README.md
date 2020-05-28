@@ -6,7 +6,7 @@ Sample Coordinates: A(1, 1), B(1, 3), C(4, 4), D(6, 1)
 
 ![Coordinates](src/main/resources/Coordinates.png "Coordinates")
 
-<span style="color:blue">Minimum distance of all points = 2.0</span>
+<span style="color:blue">*Minimum distance of all points = 2.0*</span>
 
 
 ## Build and Test
