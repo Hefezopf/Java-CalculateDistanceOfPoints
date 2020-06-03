@@ -59,13 +59,13 @@ public class PointUtilTest extends TestCase {
 	public void testDetermineMaximumOfArray1() {
 		Point[] points = { pA, pB, pC };
 
-		assertEquals(4.242640687119285, PointUtil.determineMaximumOfArray(points));
+		assertEquals(4.24, PointUtil.determineMaximumOfArray(points));
 	}
 
 	public void testDetermineMaximumOfArray2() {
 		Point[] points = { pA, pB, pC, pD };
 
-		assertEquals(5.385164807134504, PointUtil.determineMaximumOfArray(points));
+		assertEquals(5.39, PointUtil.determineMaximumOfArray(points));
 	}
 
 	public void testDetermineMaximumOfArray3() {
@@ -77,7 +77,7 @@ public class PointUtilTest extends TestCase {
 	public void testDetermineMinimumOfArray1() {
 		Point[] points = { pA, pC, pD };
 
-		assertEquals(3.605551275463989, PointUtil.determineMinimumOfArray(points));
+		assertEquals(3.61, PointUtil.determineMinimumOfArray(points));
 	}
 
 	public void testDetermineMinimumOfArray2() {

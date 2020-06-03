@@ -8,7 +8,7 @@ Sample Coordinates: A(1, 1), B(1, 3), C(4, 4), D(6, 1)
 
 Minimum distance of all points = 2.0
 
-Maximum distance of all points = 5.385164807134504
+Maximum distance of all points = 5.39
 
 
 ## Build
@@ -35,7 +35,7 @@ Run the command line app
 >
 >Minimum distance of all points = 2.0
 >
->Maximum distance of all points = 5.385164807134504
+>Maximum distance of all points = 5.39
 
 or run with params
 
@@ -47,7 +47,7 @@ Calling the app with this params should result in:
 >
 >Minimum distance of all points = 1.0
 >
->Maximum distance of all points = 4.123105625617661
+>Maximum distance of all points = 4.12
 
 Hint: Only use single digit numbers as point coordinates like (4,3)!
 

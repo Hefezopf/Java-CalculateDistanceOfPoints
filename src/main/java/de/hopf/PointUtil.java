@@ -1,8 +1,10 @@
 package de.hopf;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 public class PointUtil {
 
@@ -46,7 +48,7 @@ public class PointUtil {
 			max = calculateMaximum(points, startPoint, max, i);
 		}
 
-		return max;
+		return limitValue(max, 2);
 	}
 
 	public static double determineMinimumOfArray(Point[] points) {
@@ -62,7 +64,22 @@ public class PointUtil {
 			min = calculateMinimum(points, startPoint, min, i);
 		}
 
-		return min;
+		return limitValue(min, 2);
+	}
+
+	private static double limitValue(double value, int digits) {
+		double erg = 0;
+		NumberFormat nf = NumberFormat.getInstance(new Locale("en", "US"));
+		nf.setMinimumFractionDigits(digits);
+		nf.setMaximumFractionDigits(digits);
+		try {
+			String s = nf.format(value);
+			Double ergAsObj = new Double(s);
+			erg = ergAsObj.doubleValue();
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+		}
+		return erg;
 	}
 
 	private static double calculateMaximum(Point[] points, Point startPoint, double max, int startVal) {
