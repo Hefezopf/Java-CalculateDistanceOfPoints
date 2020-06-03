@@ -69,7 +69,7 @@ public class PointUtil {
 
 	private static double limitValue(double value, int digits) {
 		double erg = 0;
-		NumberFormat nf = NumberFormat.getInstance(new Locale("en", "US"));
+		NumberFormat nf = NumberFormat.getInstance(Locale.ENGLISH);
 		nf.setMinimumFractionDigits(digits);
 		nf.setMaximumFractionDigits(digits);
 		try {
