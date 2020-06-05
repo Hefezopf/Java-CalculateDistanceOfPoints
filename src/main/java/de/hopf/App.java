@@ -1,9 +1,5 @@
 package de.hopf;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * You can also call the app the cmd params like so:
  * Calling to App with "(4,3)", "(5,2)", "(1,1)", "(1,2)"
@@ -16,9 +12,10 @@ public class App {
 	public static void main(String[] args) {
 		System.out.println("Start App...");
 
+		//String[] coords = { "(1,1)", "(1,3)", "(4,4)", "(6,1)" };
 		Point[] points;
 		if (args.length > 0) {
-			points = Point.parseAllCoords(args);
+			points = PointUtil.parseAllCoords(args);
 		} else {
 			Point[] pointsFixed = new Point[4];
 			pointsFixed[0] = new Point(1, 1);
@@ -28,8 +25,9 @@ public class App {
 			points = pointsFixed;
 		}
 
-		double minDistanceOfArray = Point.determineMinimumOfArray(points);
-
+		double minDistanceOfArray = PointUtil.determineMinimumOfArray(points);
 		System.out.println("Minimum distance of all points = " + minDistanceOfArray);
+		double maxDistanceOfArray = PointUtil.determineMaximumOfArray(points);
+		System.out.println("Maximum distance of all points = " + maxDistanceOfArray);
 	}
 }

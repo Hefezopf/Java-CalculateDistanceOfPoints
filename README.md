@@ -1,6 +1,6 @@
 # Java-CalculateDistanceOfPoints
 
-The java program calculates the minimum distance of points.
+The java program calculates the minimum and maximum distance of points.
 
 Sample Coordinates: A(1, 1), B(1, 3), C(4, 4), D(6, 1) 
 
@@ -8,40 +8,64 @@ Sample Coordinates: A(1, 1), B(1, 3), C(4, 4), D(6, 1)
 
 Minimum distance of all points = 2.0
 
+Maximum distance of all points = 5.39
 
-## Build and Test
+
+## Build
+
+As IDE you can use Visual Studio Code or Eclipse
 
 **mvn clean install**
 
 
+## Test
+
+Run JUnit Tests
+
+**mvn clean test**
+
+
 ## Run
 
-**mvn exec:java -Dexec.mainClass="de.hopf.App"**
+Run the command line app
 
-Output:
+**mvn exec:java -Dexec.mainClass="de.hopf.App"**
 
 >Start App...
 >
 >Minimum distance of all points = 2.0
+>
+>Maximum distance of all points = 5.39
 
 or run with params
 
 **mvn exec:java -Dexec.mainClass="de.hopf.App" -Dexec.args="(4,3) (5,2) (1,1) (1,2)"**
 
 Calling the app with this params should result in:
- 
-Output:
 
 >Start App...
 >
 >Minimum distance of all points = 1.0
+>
+>Maximum distance of all points = 4.12
 
 Hint: Only use single digit numbers as point coordinates like (4,3)!
 
 
-## Travis
+## CI/CD
 
-Each commit to GitHub will result in a automated online travis CI/CD build.
+Each commit to GitHub will result in a automated online CI/CD build.
+
+
+### GitHub
+
+GitHub Action CI/CD build:
+
+https://github.com/Hefezopf/Java-CalculateDistanceOfPoints/actions
+
+
+### Travis
+
+Travis CI/CD build:
 
 https://travis-ci.com/github/Hefezopf/Java-CalculateDistanceOfPoints
-
